@@ -4,8 +4,16 @@ import user from './assets/user.svg';
 /* target HTML elements using document.querySelector */
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
+const sideMenu = document.querySelector('#side_menu');
 
 let loadInterval;
+
+// /* generate side menu history of chats */
+// function sideMenu() {
+//   return (
+//     `<div class="side_menu"></div>`
+//   )
+// }
 
 /* implement bot loading before outputting response */
 function loader(element) {
@@ -98,3 +106,4 @@ form.addEventListener('keyup', (e) => {
 
 
 /* connect to openAI */
+
