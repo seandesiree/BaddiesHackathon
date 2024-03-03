@@ -1,10 +1,12 @@
 import bot from './assets/bot.svg';
 import user from './assets/user.svg';
 
+
 /* target HTML elements using document.querySelector */
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
 const sideMenu = document.querySelector('#side_menu');
+const newChat = document.querySelector('#new_chat');
 
 let loadInterval;
 
