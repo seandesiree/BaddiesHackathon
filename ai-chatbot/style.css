@@ -78,24 +78,31 @@ body {
 
 #chat_greeting {
   /* border: 1px solid white; */
-  text-align: center;
+  align-items: center;
   display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 100px;
+  margin-right: 300px
 }
 
 #chat_greeting img {
-    max-width: 100%;
-    height: auto;
+    max-width: 50%;
+    max-height: 50%;
+    padding-top: 10px;
 }
 
-#chat_greeting h1 {
-  margin-bottom: 10px;
+#chat_greeting p {
+  color: #dcdcdc;
+  font-size: 20px;
+  text-shadow: -1px 1px 0 #EA65C5;
 }
 
 .wrapper {
   width: 60%;
   padding: 15px;
   position: relative;
-  margin-left: 20px;
+  margin-left: 100px;
   margin-right: auto;
   border-radius: 25px;
   /* border: 1px solid white; */
