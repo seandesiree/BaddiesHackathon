@@ -6,8 +6,6 @@ load_dotenv()
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
-ASSISTANT_ID = "asst_LARLDLzD9HaY0QBokjoZrJ2Q"
-
 
 #input for creating chatbot personality
 messages = []
