@@ -10,12 +10,8 @@ const newChat = document.querySelector('#new_chat');
 
 let loadInterval;
 
-// /* generate side menu history of chats */
-// function sideMenu() {
-//   return (
-//     `<div class="side_menu"></div>`
-//   )
-// }
+/* load history of chats in the side menu */
+
 
 /* implement bot loading before outputting response */
 function loader(element) {
@@ -59,7 +55,7 @@ function chatStripe (isAi, value, uniqueId) {
     `
     <div class="wrapper ${isAi && 'ai'}">
       <div class="chat">
-        <div className="profile">
+        <div class="profile">
           <img 
             src="${isAi ? bot : user}"
             alt="${isAi ? 'bot' : 'user'}"
@@ -98,6 +94,35 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 }
 
+/* fetch data from OpenAI server -> bot's response*/
+// const response =  await fetch('URL', {
+//   method: 'POST',
+//   headers: {
+//     'Content-Type': 'application/json'
+//   },
+//   body: JSON.stringify({
+//     prompt: data.get('prompt')
+//   })
+// })
+
+/* Clear interval after response is received to load next message */
+// clearInterval(loadInterval);
+// messageDiv.innerHTML = '';
+
+// if(response.ok) {
+//   const data = await response.json(); // get bot's response
+//   const parsedData = data.bot.trim(); // need to parse the data
+
+//   typeText(messageDiv, parsedData);
+// } else {
+//   const err = await response.text();
+
+//   messageDiv.innerHTML = "Whoops! Something went wrong";
+
+//   alert(err);
+// }
+
+
 /* regulate changes in submit events */
 form.addEventListener('submit', handleSubmit);
 form.addEventListener('keyup', (e) => {
@@ -107,5 +132,5 @@ form.addEventListener('keyup', (e) => {
 })
 
 
-/* connect to openAI */
+
 
