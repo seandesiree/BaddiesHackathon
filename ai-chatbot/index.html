@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HubListen</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      h1 {
+        color: black;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div id="side_menu">
+        <div id="logo_text">
+          <img src="assets/logo.svg" alt="logo" />
+          <h1>
+            <font color="#892525">H</font>
+            <font color="#D76C0A">U</font>
+            <font color="#D1CA14">B</font>
+            <font color="#0FE130">L</font>
+            <font color="#0FE130">I</font>
+            <font color="#5D0CAF">S</font>
+            <font color="#0E0101">T</font>
+            <font color="#252A34">E</font>
+            <font color="#EA65C5">N</font>
+          </h1>
+        </div>
+        <div id="new_chat">
+          <img src="assets/plus-circle.svg" alt="plus" />
+          New Chat
+        </div>
+        <div id="chat_history">
+          <img src="assets/history.svg" alt="history" />
+          Chat History
+        </div>
+      </div>
+
+      <div id="chat_container">
+        <div id="chat_greeting">
+          <img src="assets/logo.svg" alt="logo" />
+          <p>
+            How can I support you today?
+            <br>I'm here to listen!</br>
+          </p>
+        </div>
+      </div>
+
+      <form>
+        <textarea
+          name="prompt"
+          rows="1"
+          ,
+          cols="1"
+          placeholder="Type your question here..."
+        ></textarea>
+        <button type="submit"><img src="assets/send.svg" /></button>
+      </form>
+    </div>
+    <script type="module" src="/script.js"></script>
+  </body>
+</html>
