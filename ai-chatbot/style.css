@@ -19,13 +19,11 @@ body {
   display: flex;
   flex-direction: column;
   position: fixed;
-  /* align-items: center; */
   justify-content: space-between;
 }
 
 #side_menu {
   width: 200px;
-  /* border: 1px solid white; */
   background-color: #10a37f;
   margin: 0;
   padding: 0;
@@ -37,75 +35,72 @@ body {
 #logo_text {
   padding: 12px;
   margin: 20px;
-  /* border: 1px solid white; */
   border-radius: 5px;
-  -webkit-text-fill-color: #dcdcdc;
-  font-size: 20px;
+  font-size: 11px;
   align-items: center;
+  position: relative;
 }
 
 #logo_text h1 {
-  align-items: center;
+  margin-left: 10px;
 }
 
 #logo_text img {
   max-width: 20%;
   max-height: 20%;
+  float: left;
 }
 
 #new_chat {
   padding: 12px;
-  margin: 20px;
-  border: 1px solid white;
+  margin: 50px 20px 20px 20px;
   border-radius: 5px;
   -webkit-text-fill-color: #dcdcdc;
-  font-size: 20px;
-  /* text-align: left; */
+  font-size: 18px;
   align-items: center;
 }
 
 #new_chat img {
   padding-left: 6px;
-  padding-right: 12px;
-  max-width: 30%;
-  max-height: 30%;
+  padding-right: 6px;
+  max-width: 25%;
+  max-height: 25%;
+  float: left;
 }
 
 #chat_history {
   padding: 10px;
-  margin: 20px;
-  /* border: 1px solid white; */
+  margin: 20px 20px 20px 20px;
   border-radius: 5px;
   -webkit-text-fill-color: #dcdcdc;
-  font-size: 19.6px;
+  font-size: 18px;
   text-align: left;
+  
 }
 
 #chat_history img {
   padding-left: 6px;
-  padding-right: 12px;
-  max-width: 30%;
-  max-height: 30%;
+  padding-right: 6px;
+  max-width: 25%;
+  max-height: 25%;
+  margin-right: 15px;
+  float: left;
 }
 
 #chat_container {
   flex: 1;
   width: 100%;
   padding-top: 25px;
-  /* border: 1px solid white; */
   height: 100%;
   background-color: #AAA6DF;
   margin-left: 200px;
   position: relative;
   overflow-y: scroll;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
-
   -ms-overflow-style: none;
   scrollbar-width: none;
-
   padding-bottom: 20px;
   scroll-behavior: smooth;
 }
@@ -116,7 +111,6 @@ body {
 }
 
 #chat_greeting {
-  /* border: 1px solid white; */
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -137,6 +131,68 @@ body {
   text-shadow: -1px 1px 0 #EA65C5;
 }
 
+.button {
+  padding: 10px 10px;
+  margin-top: 10px;
+  font-size: 10px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04AA6D;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px #999;
+}
+
+.button:hover {background-color: #10a37f}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.hidden {
+  display: none;
+}
+
+#btn_text {
+  height: 72px;
+  width: 80%;
+  padding: 16px 16px;
+  border-radius: 8px;
+  margin: 250px 30px 20px 30px; 
+  background-color: #AAA6DF;
+  font-weight: bold;
+  font-size: x-small;
+  -webkit-text-fill-color: #dcdcdc;
+  text-align: center;
+  line-height: 20px;
+  position: fixed;
+  align-items: center;
+}
+
+.popup-message {
+  animation: popup 7s forwards;
+}
+
+@keyframes popup {
+  0% {
+    transform: translateY(15%);
+    opacity: 0;
+  }
+  10%, 90% {
+    transform: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15%);
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 .wrapper {
   width: 60%;
   padding: 15px;
@@ -144,7 +200,6 @@ body {
   margin-left: 100px;
   margin-right: auto;
   border-radius: 25px;
-  /* border: 1px solid white; */
   box-shadow: 0 0 8px 0 rgba(0,0,0,0.25);
 }
 
@@ -185,10 +240,8 @@ body {
 
 .message {
   flex: 1;
-
   color: #dcdcdc;
   font-size: 20px;
-
   max-width: 100%;
   overflow-x: scroll;
 
@@ -199,7 +252,6 @@ body {
    * The default value for the white-space property in CSS is "normal". This tells the browser to collapse multiple white space characters into a single space, and to wrap text onto multiple lines as needed to fit within its container.
   */
   white-space: pre-wrap; 
-
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -210,14 +262,11 @@ body {
 }
 
 form {
-  /* width: 100%;
-  max-width: 1280px; */
   margin-left: 250px;
   margin-bottom: 100px;
   margin-right: 50px;
   padding: 20px;
   background: rgba(213, 78, 86, 1);
-  /* border: 1px solid white; */
   border-radius: 25px;
   display: flex;
   flex-direction: row;
@@ -231,10 +280,8 @@ form {
 
 textarea {
   width: 100%;
-
   color: #fff;
   font-size: 18px;
-
   padding: 10px;
   background: transparent;
   border-radius: 5px;

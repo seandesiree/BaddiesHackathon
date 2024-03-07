@@ -8,10 +8,8 @@ const chatContainer = document.querySelector('#chat_container');
 const sideMenu = document.querySelector('#side_menu');
 const newChat = document.querySelector('#new_chat');
 
+
 let loadInterval;
-
-/* load history of chats in the side menu */
-
 
 /* implement bot loading before outputting response */
 function loader(element) {
@@ -94,16 +92,29 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 }
 
+/* "Ask about me" pop-message when button is clicked */
+const popText = document.getElementById('btn_text');
+const askButton = document.getElementById('ask_btn');
+
+askButton.addEventListener('click', () => {
+  popText.classList.remove('hidden');
+  popText.classList.add('popup-message');
+});
+
+popText.addEventListener('animationend', () => {
+  popText.classList.remove('popup-message');
+  popText.classList.add('hidden');
+});
+
 /* fetch data from OpenAI server -> bot's response*/
-// const response =  await fetch('URL', {
-//   method: 'POST',
-//   headers: {
-//     'Content-Type': 'application/json'
-//   },
-//   body: JSON.stringify({
-//     prompt: data.get('prompt')
-//   })
-// })
+// const resp = await fetch("http://127.0.0.1:5000/chat", { 
+//   method: "POST", 
+//   headers: { "Content-Type": "application/json" }, 
+//   mode: 'cors',
+//   body: JSON.stringify({ prompt: "message" }) });
+// data = await resp.json();
+// console.log(data.resp);
+
 
 /* Clear interval after response is received to load next message */
 // clearInterval(loadInterval);
@@ -122,6 +133,7 @@ const handleSubmit = async (e) => {
 //   alert(err);
 // }
 
+/* load history of chats in the side menu */
 
 /* regulate changes in submit events */
 form.addEventListener('submit', handleSubmit);
