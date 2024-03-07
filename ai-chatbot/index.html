@@ -7,9 +7,12 @@
     <title>HubListen</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      h1 {
-        color: black;
-        font-size: small;
+      .multicolortext {
+        background-image: linear-gradient(to left, violet, indigo, green, blue, yellow, orange, red);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
       }
     </style>
   </head>
@@ -19,19 +22,11 @@
         <div id="logo_text">
           <img src="assets/logo.svg" alt="logo" />
           <h1>
-            <font color="#892525">H</font>
-            <font color="#D76C0A">U</font>
-            <font color="#D1CA14">B</font>
-            <font color="#0FE130">L</font>
-            <font color="#0FE130">I</font>
-            <font color="#5D0CAF">S</font>
-            <font color="#0E0101">T</font>
-            <font color="#252A34">E</font>
-            <font color="#EA65C5">N</font>
+            <span class="multicolortext">HUBLISTEN</span>
           </h1>
         </div>
         <div id="new_chat">
-          <img src="assets/plus-circle.svg" alt="plus" />
+          <img src="assets/comment-medical.svg" alt="plus" />
           New Chat
         </div>
         <div id="chat_history">
@@ -46,6 +41,10 @@
           <p>
             How can I support you today?
             <br>I'm here to listen!</br>
+            <button id="ask_btn" class="button">Ask about me</button>
+          </p>
+          <p id="btn_text" class="hidden">
+            HubListen is an AI-powered desktop chatbot, crafted to deliver swift and unbiased solutions and recommendations for frequently asked questions spanning reproduction, mentorship, financial guidance, and culturally sensative topics. Harnessing cutting-edge technology, users can anticipate tailored responses and referrals that are both convenient and prompt.
           </p>
         </div>
       </div>
