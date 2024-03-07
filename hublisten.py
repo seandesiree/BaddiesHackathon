@@ -2,8 +2,6 @@ from openai import OpenAI
 import os 
 from dotenv import load_dotenv
 
-#connect to script.JS
-
 
 load_dotenv()
 
